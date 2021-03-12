@@ -4,6 +4,7 @@ import com.ramonfernandes.springioc.pojo.Book;
 import com.ramonfernandes.springioc.pojo.Car;
 import com.ramonfernandes.springioc.pojo.ItemObject;
 import com.ramonfernandes.springioc.pojo.Shirt;
+import com.ramonfernandes.springioc.pojo.SingletonMap;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -26,6 +27,11 @@ public class AppConfig {
     @Bean(name = "book")
     public ItemObject book() {
         return new Book();
+    }
+
+    @Bean
+    public SingletonMap singletonMap() {
+        return new SingletonMap();
     }
 
 }
